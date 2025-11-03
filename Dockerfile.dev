@@ -1,0 +1,20 @@
+# 🧱 Étape 1 — Base : image Node légère
+FROM node:20-alpine
+
+# 🗂️ On définit le dossier de travail
+WORKDIR /app
+
+# 📦 On copie les fichiers de dépendances d’abord (optimisation du cache)
+COPY package*.json ./
+
+# 🧩 On installe les dépendances
+RUN npm install
+
+# 🧾 On copie le reste du projet
+COPY . .
+
+# 🌐 On expose le port utilisé par Vite (par défaut 5173)
+EXPOSE 5173
+
+# 🚀 Commande de lancement en mode développement
+CMD ["npm", "run", "dev"]
