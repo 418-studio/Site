@@ -55,7 +55,7 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run build
-
+```
 ---
 
 ## 🐳 Docker — Environnement de développement partagé
