@@ -1,3 +1,4 @@
+## DEVELOPPEMENT LOCAL ON ECOUTE LE PORT 5173 
 # 🧱 Étape 1 — Base : image Node légère
 FROM node:20-alpine
 
