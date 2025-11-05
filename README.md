@@ -78,6 +78,7 @@ git switch -c feat/nom2-fonctionnalite2
 
 En raison de l’utilisation de Docker et de l’isolation du dossier node_modules (grâce au volume),
 l’installation de nouvelles dépendances ne peut pas être faite directement depuis le conteneur.
+
 -**installer la librairie en local**
 
 ```bash
@@ -117,21 +118,7 @@ A chaque commit :
 
 ## 👥 Bonnes pratiques d’équipe
 
-- 1 branche = 1 feature
-- Commits formatés (`feat`, `fix`, `docs`, etc.)
-- CI obligatoire avant merge
-- Docker pour uniformiser les environnements
-
-### 🌿 Gestion des branches
-
-#### 🔹 Règles
-
-- Ne jamais travailler directement sur `main`
-- Créer une branche par objectif (feature, fix, doc…)
-- Nommer les branches en **kebab-case** (`mots-séparés-par-des-tirets`)
-- Supprimer les branches locales après merge pour garder le dépôt propre
-
-#### 🔹 Conventions de nommage des branches
+### 🔹 Conventions de nommage des branches
 
 | Type de branche | Exemple                        | Usage                            |
 | --------------- | ------------------------------ | -------------------------------- |
@@ -144,7 +131,9 @@ A chaque commit :
 
 #### 🔹 Format du message
 
+```bash
 <type>(<scope>): <message>
+```
 
 **exemples**
 
