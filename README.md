@@ -78,19 +78,19 @@ git switch -c feat/nom2-fonctionnalite2
 
 En raison de l’utilisation de Docker et de l’isolation du dossier node_modules (grâce au volume),
 l’installation de nouvelles dépendances ne peut pas être faite directement depuis le conteneur.
-1-**installer la librairie en local**
+-**installer la librairie en local**
 
 ```bash
 npm install <nom_librairie>
 ```
 
-2-**Reconstruire l'image docker** pour que la dépendance soit prise en compte
+-**Reconstruire l'image docker** pour que la dépendance soit prise en compte
 
 ```bash
 docker build -t studio418-dev -f Dockerfile.dev .
 ```
 
-3-**Relancer le conteneur**
+-**Relancer le conteneur**
 
 ```bash
 docker run -it -p 5173:5173 \
