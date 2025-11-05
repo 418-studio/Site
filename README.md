@@ -89,6 +89,27 @@ npm install <nom_librairie>
 ```bash
 docker build -t studio418-dev -f Dockerfile.dev .
 ```
+---
+
+## 🐳 Docker — Environnement de développement partagé
+- Objectif : garantir un environnement identique pour tous
+- Commandes principales :
+  - `docker build -t studio418-dev -f Dockerfile.dev .`
+  - `docker run -it -p 5173:5173 --name studio418-dev studio418-dev`
+- Script `dev`: `"vite --host 0.0.0.0"`
+- Bon à savoir :
+  - `.dockerignore` exclut les fichiers inutiles
+  - Utiliser `-v .:/app` pour le hot reload local
+
+---
+
+## 👥 Bonnes pratiques d’équipe
+- 1 branche = 1 feature
+- Commits formatés (`feat`, `fix`, `docs`, etc.)
+- CI obligatoire avant merge
+- Docker pour uniformiser les environnements
+
+### 🌿 Gestion des branches
 
 3-**Relancer le conteneur**
 
