@@ -11,13 +11,18 @@ footer {
 }
 footer p {
     color: var(--color-white);
-    font-size: 16px;
+    font-size: 14px;
+
+}
+footer>p {
+        width : 28%;
 }
 
 footer > div {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width : 28%;
     gap: 10px;
 }
 .socialIcons {
@@ -30,4 +35,5 @@ footer > div {
     width: 25px;
     height: 25px;
     cursor: pointer;
+
 }

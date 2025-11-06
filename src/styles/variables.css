@@ -36,14 +36,16 @@
 
     /* Sizes */
     /* Mobile */
-    --font-size-mobile-h1 : 96px;
-    --font-size-mobile-h2 : 36px;
-    --font-size-mobile-card-title : 48px;
-    --font-size-mobile-text : 20px;
+    --font-size-mobile-h1 : 50px;
+    --font-size-mobile-h2 : 32px;
+    --font-size-mobile-card-title : 34px;
+    --font-size-mobile-text : 18px;
+    --font-size-mobile-button : 22px;
 
     /* Desktop */
     --font-size-desktop-h1 : 200px;
-    --font-size-desktop-h2 : 64px;
-    --font-size-desktop-card-title : 80px;
-    --font-size-desktop-text : 32px;
+    --font-size-desktop-h2 : 48px;
+    --font-size-desktop-card-title : 38px;
+    --font-size-desktop-text : 22px;
+    --font-size-desktop-button : 24px;
 }
