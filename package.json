@@ -12,6 +12,7 @@
 		"hook:commitmsh": "echo 'npx --no -- commitlint --edit \"$1\"' > .husky/commit-msg && chmod +x .husky/commit-msg"
 	},
 	"dependencies": {
+		"motion": "^12.23.24",
 		"react": "^19.1.1",
 		"react-dom": "^19.1.1"
 	},
