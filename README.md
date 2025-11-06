@@ -18,6 +18,11 @@ git clone <lien>
 cd <nom_du_projet>
 ```
 
+- Avec l'utilisation de typescrypt, afin d'éviter des problèmes avec l'éditeur de code on peut installer les librairies afin que typescript ai accés à toutes les librairies du projet
+```bash
+npm install
+````
+
 - vérifier que docker desktop est lancé
 - créer une image locale
 
