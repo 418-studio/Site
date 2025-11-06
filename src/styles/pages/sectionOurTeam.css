@@ -1,0 +1,10 @@
+#SectionOurTeam{
+    padding: 64px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+}
