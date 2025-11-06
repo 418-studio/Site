@@ -1,0 +1,40 @@
+body {
+    background-color: var(--color-accent-blue);
+
+}
+
+section {
+    height: 100dvh;
+}
+
+h1 {
+    font-family: var(--font-poiret);
+    font-size: var(--font-size-mobile-h1);
+    color: var(--color-text-black);
+}
+
+h2 {
+    font-family: var(--font-josefin);
+    font-size: var(--font-size-mobile-h2);
+    color: var(--color-accent-blue);
+}
+
+p {
+    font-family: var(--font-lato-regular);
+    font-size: var(--font-size-mobile-text);
+    color: var(--color-text-black);
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: var(--font-size-desktop-h1);
+    }
+    
+    h2 {
+        font-size: var(--font-size-desktop-h2);
+    }
+
+    p {
+        font-size: var(--font-size-desktop-text);
+    }
+}
