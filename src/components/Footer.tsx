@@ -1,6 +1,6 @@
-import linkedinIcon from '../../public/images/icons/icon-linkedin.svg'
-import githubIcon from '../../public/images/icons/icon-github.svg'
-import fnpLogo from '../../public/images/logos/logo-fnp.webp'
+import linkedinIcon from '/images/icons/icon-linkedin.svg'
+import githubIcon from '/images/icons/icon-github.svg'
+import fnpLogo from '/images/logos/logo-fnp.webp'
 
 import '../styles/components/footer.css'
 
