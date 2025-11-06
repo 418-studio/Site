@@ -18,9 +18,12 @@
     /* colors */
     --color-white : #F5F5F3;
     --color-text : #2B2B28;
+    --color-boxShadow : rgba(43, 43, 40, 0.3);;
     --color-text-black : #2B2B28;
     --color-accent-gold : #E3BD33;
     --color-accent-red : #C33C54;
+    --color-accent-green : #6F8D6A;
+    --color-accent-lighGreen: #D7E8BC;
     --color-accent-blue : #2D5282;
     --color-border-black : #433E3C;
 
