@@ -39,7 +39,7 @@ const CarouselImages = ({ images, currentImage, goToImage }: CarouselImagesProps
 							className={`carousel__dot ${
 								currentImage === index ? 'carousel__dot--active' : ''
 							}`}
-              />
+						/>
 					))}
 				</div>
 			</div>
