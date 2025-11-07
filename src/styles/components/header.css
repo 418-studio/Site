@@ -2,23 +2,27 @@ header {
 	position: fixed;
 	display: flex;
 	flex-direction: row-reverse;
+	justify-content: space-between;
 	top: 0;
 	left: 0;
-	height: 10dvh;
+	height: 8dvh;
 	width: 100%;
-	padding: 3dvh 5dvw;
-	z-index: 1000;
-
+	padding: 2dvh 5dvw;
+	z-index: 1001;
 }
+
 header nav {
-    position: relative;
 	display: flex;
 	width: 50%;
 	flex-direction: row-reverse;
+
 }
 .navMobile {
     position: absolute;
-    top: 8dvh;
+	padding: 13dvh 20px 20px 20px;
+	right: 0;
+	top: 0;
+	width: 100%;
     display: flex;
     flex-direction: column;
     gap: 2dvh;
@@ -26,7 +30,10 @@ header nav {
     font-family: var(--font-lato-regular);
     color: var(--color-white);
     font-size: var(--font-size-mobile-text);
+	background-image: url("/images/hero/hero-bg-mobile-noopacity.svg");
+	box-shadow: -5px 0 15px var(--color-boxShadow);
 }
+
 
 .navDesktop {
 	display: none;
@@ -40,6 +47,9 @@ header nav {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+}
+.navToggle {
+	z-index: 999;
 }
 @media (min-width: 769px) {
 
