@@ -33,7 +33,7 @@
 	.bento__card {
 		border-radius: 0;
 		margin: 0;
-		padding: 0;
+		padding: 0.5rem;
 		transition:
 			transform 0.3s ease,
 			box-shadow 0.3s ease;
@@ -106,7 +106,6 @@
 	}
 }
 
-/* Responsive pour très grands écrans */
 @media (min-width: 1440px) {
 	.bento__grid {
 		gap: 2rem;
@@ -115,6 +114,6 @@
 	}
 
 	.bento__card {
-		border-radius: 10%;
+		border-radius: 5%;
 	}
 }
