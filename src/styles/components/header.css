@@ -7,8 +7,10 @@ header {
 	height: 10dvh;
 	width: 100dvw;
 	padding: 3dvh 5dvw;
+	z-index: 1000;
+
 }
-nav {
+header nav {
     position: relative;
 	display: flex;
 	width: 50%;
