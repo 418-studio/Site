@@ -28,7 +28,9 @@ function Footer() {
 					</div>
 				</div>
 				<p>© 2025 Studio 418.</p>
-				<img src={fnpLogo} alt="Logo de la fabrique numérique paloise" />
+				<div>
+					<img src={fnpLogo} alt="Logo de la fabrique numérique paloise" />
+				</div>
 			</footer>
 		</>
 	)

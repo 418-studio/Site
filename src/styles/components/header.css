@@ -5,10 +5,12 @@ header {
 	top: 0;
 	left: 0;
 	height: 10dvh;
-	width: 100dvw;
+	width: 100%;
 	padding: 3dvh 5dvw;
+	z-index: 1000;
+
 }
-nav {
+header nav {
     position: relative;
 	display: flex;
 	width: 50%;

@@ -1,12 +1,15 @@
 import Footer from './components/Footer.tsx'
 import Carousel from './pages/Carousel.tsx'
+import SectionOurTeam from './pages/SectionOurTeam.tsx'
 import Header from './components/Header.tsx'
+import Hero from './pages/Hero.tsx'
 
 function App() {
 	return (
 		<>
-			<Carousel />
 			<Header />
+			<Hero />
+			<SectionOurTeam />
 			<Footer />
 		</>
 	)

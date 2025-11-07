@@ -1,0 +1,25 @@
+#SectionOurTeam{
+    width: 100%;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 64px 0;
+    gap: 32px;
+}
+
+#titre_sectionOurTeam {
+    color: var(--color-accent-gold)
+}
+
+#TeamCard_Container{
+    max-width: var(--max-size-section);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 100%; 
+}
