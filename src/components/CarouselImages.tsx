@@ -16,17 +16,12 @@ const CarouselImages = ({ images, currentImage, goToImage }: CarouselImagesProps
 	return (
 		<div className="carousel__images">
 			<div className="carousel__slider">
-				<div
-					className="carousel__track"
-					style={{
-						transform: `translateX(-${currentImage * 100}%)`,
-					}}
-				>
-					{images.map((image) => (
-						<div className="carousel__slide" key={image.id}>
-							<img src={image.src} alt={image.alt} className="carousel__image" />
-						</div>
-					))}
+				<div className="carousel__slide">
+					<img
+						src={images[currentImage].src}
+						alt={images[currentImage].alt}
+						className="carousel__image"
+					/>
 				</div>
 			</div>
 
