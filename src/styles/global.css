@@ -1,6 +1,9 @@
 body {
     background-image: url("/images/hero/hero-bg-mobile.svg");
+}
 
+#root{
+    width: 100%;
 }
 
 section {
