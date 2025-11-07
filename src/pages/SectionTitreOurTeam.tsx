@@ -1,5 +1,5 @@
 import '../styles/pages/sectionTitreOurTeam.css'
-import banner from '../../public/images/composants/banner.svg'
+import banner from '../../public/images/composants/banner.webp'
 
 export default function SectionTitreOurTeam() {
 	return (
