@@ -1,10 +1,16 @@
 import '../styles/pages/sectionContact.css'
 import tasse_the from '../../public/images/illustrations/cup-of-tea.webp'
 import sachet_the from '../../public/images/illustrations/teabag.webp'
+import image_background from '../../public/images/illustrations/duo.webp'
 
 export default function SectionContact() {
 	return (
 		<section id="sectionContact">
+			<img
+				id="sectionContact_imageBackground"
+				src={image_background}
+				alt="2 personnes discutent pendant le thé"
+			/>
 			<div id="sectionContact_title">
 				<h2>Contactez-nous</h2>
 			</div>
