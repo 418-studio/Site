@@ -5,6 +5,7 @@ import SectionContact from './pages/SectionContact.tsx'
 import Carousel from './pages/Carousel.tsx'
 import Hero from './pages/Hero.tsx'
 import SectionTitreOurTeam from './pages/SectionTitreOurTeam.tsx'
+import BentoGrid from './pages/BentoGrid.tsx'
 
 function App() {
 	return (
@@ -14,6 +15,7 @@ function App() {
 			<Carousel />
 			<SectionTitreOurTeam />
 			<SectionOurTeam />
+			<BentoGrid />
 			<SectionContact />
 			<Footer />
 		</>
