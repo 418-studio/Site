@@ -1,0 +1,50 @@
+#sectionTitreOurTeam{
+    height: 380px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px 0px 0;
+}
+
+#sectionTitreOurTeam h2{
+    color: var(--color-white);
+    text-align: center;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+#banniere_texte{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 300px;
+}
+
+#citation{
+    z-index: 3;
+    width: 350px;
+    text-align: center;
+}
+
+#banniere_texte img{
+    position: absolute;
+    width: 750px;
+    padding-right: 16px;
+}
+
+@media (min-width: 750px){
+    #sectionTitreOurTeam{
+        display: flex;
+    }
+}
+
+@media (min-width: 1024px){
+    #citation{
+        width: 450px;
+    }
+}

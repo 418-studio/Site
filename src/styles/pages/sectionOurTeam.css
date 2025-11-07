@@ -23,3 +23,9 @@
     gap: 50px;
     width: 100%; 
 }
+
+@media (min-width: 750px){
+    #titre_sectionOurTeam{
+        display: none;
+    }
+}

@@ -4,6 +4,7 @@ import Header from './components/Header.tsx'
 import SectionContact from './pages/SectionContact.tsx'
 import Carousel from './pages/Carousel.tsx'
 import Hero from './pages/Hero.tsx'
+import SectionTitreOurTeam from './pages/SectionTitreOurTeam.tsx'
 
 function App() {
 	return (
@@ -11,6 +12,7 @@ function App() {
 			<Header />
 			<Hero />
 			<Carousel />
+			<SectionTitreOurTeam />
 			<SectionOurTeam />
 			<SectionContact />
 			<Footer />
