@@ -59,9 +59,12 @@ export default function SectionOurTeam() {
 
 	return (
 		<div id="SectionOurTeam">
-			<TeamCard collaborateur={yannick} />
-			<TeamCard collaborateur={benjamin} />
-			<TeamCard collaborateur={laure} />
+			<h2 id="titre_sectionOurTeam">Notre Equipe</h2>
+			<div id="TeamCard_Container">
+				<TeamCard collaborateur={yannick} />
+				<TeamCard collaborateur={benjamin} />
+				<TeamCard collaborateur={laure} />
+			</div>
 		</div>
 	)
 }
