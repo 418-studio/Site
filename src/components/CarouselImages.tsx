@@ -39,8 +39,7 @@ const CarouselImages = ({ images, currentImage, goToImage }: CarouselImagesProps
 							className={`carousel__dot ${
 								currentImage === index ? 'carousel__dot--active' : ''
 							}`}
-							aria-label={`Aller à l'image ${index + 1}`}
-						/>
+              />
 					))}
 				</div>
 			</div>
