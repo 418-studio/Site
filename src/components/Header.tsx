@@ -1,17 +1,36 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import NavButton from './NavButton'
 import '../styles/components/header.css'
 
 export default function Header() {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+	const [scrolled, setScrolled] = useState(false)
+
+	useEffect(() => {
+		function handleScroll() {
+			const scrollY = window.scrollY
+			const trigger = window.innerHeight - window.innerHeight
+			setScrolled(scrollY > trigger)
+		}
+		window.addEventListener('scroll', handleScroll)
+		return () => window.removeEventListener('scroll', handleScroll)
+	}, [])
 
 	function handleNavButtonClick() {
-		// action bouton
+		window.location.href = 'mailto:studio418.pro@gmail.com'
 	}
 
 	return (
-		<header>
+		<motion.header
+			className={scrolled ? 'bgNav' : ''}
+			animate={{
+				backgroundImage: scrolled ? 'url("/images/hero/hero-bg-mobile-noopacity.svg")' : '',
+			}}
+			transition={{
+				backgroundImage: { duration: 1.2, ease: 'easeInOut' },
+			}}
+		>
 			<nav>
 				<ul className="navDesktop">
 					<li>Présentation</li>
@@ -26,23 +45,26 @@ export default function Header() {
 				</button>
 				<AnimatePresence>
 					{isMobileMenuOpen && (
-						<motion.ul
-							className="navMobile"
-							initial={{ opacity: 0, y: -20 }}
-							animate={{ opacity: 1, y: 0 }}
-							exit={{ opacity: 0, y: -20 }}
-							transition={{ duration: 0.2 }}
-						>
-							<li>Présentation</li>
-							<li>Notre équipe</li>
-							<li>Contact</li>
-							<li>
-								<NavButton handleOnclick={handleNavButtonClick} />
-							</li>
-						</motion.ul>
+						<>
+							<motion.ul
+								className="navMobile"
+								initial={{ opacity: 0, y: -100 }}
+								animate={{ opacity: 1, y: 0 }}
+								exit={{ opacity: 0, y: -100 }}
+								transition={{ duration: 0.3 }}
+							>
+								<li>Présentation</li>
+								<li>Notre équipe</li>
+								<li>Contact</li>
+								<li>
+									<NavButton handleOnclick={handleNavButtonClick} />
+								</li>
+							</motion.ul>
+						</>
 					)}
 				</AnimatePresence>
 			</nav>
-		</header>
+			{scrolled && <img src="/images/logos/logo-418.svg" alt="logo 418 du studio" />}
+		</motion.header>
 	)
 }
