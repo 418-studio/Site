@@ -8,8 +8,8 @@ function App() {
 	return (
 		<>
 			<Header />
-			<Carousel />
 			<Hero />
+			<Carousel />
 			<SectionOurTeam />
 			<Footer />
 		</>
