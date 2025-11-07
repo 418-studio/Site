@@ -1,6 +1,6 @@
 const ContainerText = () => {
 	return (
-		<div className="container__text">
+		<article className="container__text">
 			<h2 className="container__title">
 				Bienvenue chez
 				<br></br>
@@ -21,7 +21,7 @@ const ContainerText = () => {
 				Que vous ayez besoin d un site vitrine, d une application web complexe ou d une
 				refonte complète, nous sommes là pour vous accompagner à chaque étape.
 			</p>
-		</div>
+		</article>
 	)
 }
 

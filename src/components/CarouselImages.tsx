@@ -14,7 +14,7 @@ interface CarouselImagesProps {
 
 const CarouselImages = ({ images, currentImage, goToImage }: CarouselImagesProps) => {
 	return (
-		<div className="carousel__images">
+		<article className="carousel__images">
 			<div className="carousel__slider">
 				<div
 					className="carousel__track"
@@ -44,7 +44,7 @@ const CarouselImages = ({ images, currentImage, goToImage }: CarouselImagesProps
 					))}
 				</div>
 			</div>
-		</div>
+		</article>
 	)
 }
 
