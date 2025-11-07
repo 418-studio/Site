@@ -1,4 +1,4 @@
-import '../styles/components/BentoGrid.css'
+import '../styles/components/bentogrid.css'
 
 interface BentoCard {
 	id: number
