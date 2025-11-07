@@ -45,7 +45,7 @@ const Carousel = () => {
 
 	return (
 		<section className="carousel">
-			<div className="carousel__container">
+			<article className="carousel__container">
 				<ContainerText />
 				<CarouselImages
 					images={images}
@@ -54,7 +54,7 @@ const Carousel = () => {
 					prevImage={prevImage}
 					goToImage={goToImage}
 				/>
-			</div>
+			</article>
 		</section>
 	)
 }
