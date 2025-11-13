@@ -7,7 +7,7 @@ const ContainerText = () => {
 				className="container__description"
 				initial={{ opacity: 0, y: 50 }}
 				whileInView={{ opacity: 1, y: 0 }}
-				transition={{ duration: 0.8, delay: 0.4 }}
+				transition={{ duration: 0.2, delay: 0.4 }}
 				viewport={{ once: true, amount: 0.5 }}
 			>
 				Nous sommes trois développeurs passionnés, sortis fraîchement de formation, unis par
@@ -18,7 +18,7 @@ const ContainerText = () => {
 				className="container__quote"
 				initial={{ opacity: 0, y: 50 }}
 				whileInView={{ opacity: 1, y: 0 }}
-				transition={{ duration: 0.8, delay: 0.8 }}
+				transition={{ duration: 0.2, delay: 0.8 }}
 				viewport={{ once: true, amount: 0.5 }}
 			>
 				&ldquo;Mélanger apprentissage, créativité et code pour concevoir des projets utiles,
@@ -29,7 +29,7 @@ const ContainerText = () => {
 				className="container__description"
 				initial={{ opacity: 0, y: 50 }}
 				whileInView={{ opacity: 1, y: 0 }}
-				transition={{ duration: 0.8, delay: 1.2 }}
+				transition={{ duration: 0.2, delay: 1.2 }}
 				viewport={{ once: true, amount: 0.5 }}
 			>
 				Que vous ayez besoin d’un site vitrine, d’une application web complexe ou d’une

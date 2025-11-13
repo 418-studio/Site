@@ -60,7 +60,7 @@ const Carousel = () => {
 	const handleMouseUp = (e: React.MouseEvent) => {
 		const endX = e.clientX
 		const diff = startX - endX
-		const swipeThreshold = 50
+		const swipeThreshold = 80
 		if (diff > swipeThreshold) nextImage()
 		if (diff < -swipeThreshold) prevImage()
 	}
@@ -71,7 +71,7 @@ const Carousel = () => {
 				className="container__title"
 				initial={{ opacity: 0, y: 50 }}
 				whileInView={{ opacity: 1, y: 0 }}
-				transition={{ duration: 0.8 }}
+				transition={{ duration: 0.4 }}
 				viewport={{ once: true, amount: 0.5 }}
 			>
 				Bienvenue chez
