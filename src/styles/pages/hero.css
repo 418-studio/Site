@@ -8,7 +8,7 @@
 	justify-content: space-around;
 	padding: 0 0 5vw 0;
 	background-color: var(--color-accent-blue);
-	  margin: 0 auto 10vh auto; /* pour centrer quand width < 100% */
+	  margin: 0 auto 15vh auto; /* pour centrer quand width < 100% */
   overflow: hidden;
   transition: width 0.3s ease, border-radius 0.3s ease, margin-bottom 0.3s ease;
 }
