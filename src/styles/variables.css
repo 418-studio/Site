@@ -34,6 +34,9 @@
     --font-emblema : 'Emblema One', cursive;
     --font-josefin : 'Josefin Sans', sans-serif;
 
+    /* breakpoints */
+    --break-mobile : 430px;
+
     /* Sizes */
     /* Mobile */
     --font-size-mobile-h1 : 50px;
