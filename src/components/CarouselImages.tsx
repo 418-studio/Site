@@ -9,41 +9,33 @@ interface CarouselImage {
 interface CarouselImagesProps {
 	images: CarouselImage[]
 	currentImage: number
-	nextImage: () => void
-	prevImage: () => void
 	goToImage: (index: number) => void
 }
 
 const CarouselImages = ({ images, currentImage, goToImage }: CarouselImagesProps) => {
+	const current = images[currentImage]
+
 	return (
 		<article className="carousel__images">
-			{/* Slider */}
-			<div className="carousel__slider">
-				<motion.div
-					className="carousel__track"
-					style={{ x: `-${currentImage * 100}%` }}
-					drag="x"
-					dragConstraints={{ left: 0, right: 0 }}
-					onDragEnd={(_, info) => {
-						if (info.offset.x < -50) goToImage((currentImage + 1) % images.length)
-						if (info.offset.x > 50)
-							goToImage((currentImage - 1 + images.length) % images.length)
-					}}
-					transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-				>
-					{images.map((image) => (
-						<div className="carousel__slide" key={image.id}>
-							<img src={image.src} alt={image.alt} className="carousel__image" />
-						</div>
-					))}
-				</motion.div>
+			{/* Image principale */}
+			<div className="carousel__main">
+				<motion.img
+					key={current.id}
+					src={current.src}
+					alt={current.alt}
+					className="carousel__image"
+					initial={{ opacity: 0, scale: 0.95 }}
+					animate={{ opacity: 1, scale: 1 }}
+					exit={{ opacity: 0, scale: 0.95 }}
+					transition={{ duration: 0.5 }}
+				/>
 			</div>
 
-			{/* Miniatures comme contrôles */}
+			{/* Miniatures (contrôles) */}
 			<div className="carousel__controls">
 				{images.map((img, index) => (
 					<button
-						key={index}
+						key={img.id}
 						className={`carousel__thumb ${currentImage === index ? 'carousel__thumb--active' : ''}`}
 						onClick={() => goToImage(index)}
 					>

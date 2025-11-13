@@ -17,7 +17,7 @@ export default function SectionOurTeam() {
 		description:
 			'Orchestrateur de projets full-stack. Garant de la qualité et de la livraison dans les temps',
 		reseau_link: {
-			github: '',
+			github: 'https://github.com/yannou64',
 			linkedin: '',
 		},
 		style_card: 'yellow',
@@ -34,7 +34,7 @@ export default function SectionOurTeam() {
 		description:
 			"Technicien backend & frontend et friand d'animation. Passionné par les défis techniques complexes",
 		reseau_link: {
-			github: '',
+			github: 'https://github.com/BenSTAU',
 			linkedin: '',
 		},
 		style_card: 'green',
@@ -51,7 +51,7 @@ export default function SectionOurTeam() {
 		description:
 			"Créatrice d'interfaces élégantes et intuitives. L'oeil créatif qui fait la différence.",
 		reseau_link: {
-			github: '',
+			github: 'https://github.com/LaureLavie',
 			linkedin: '',
 		},
 		style_card: 'blue',

@@ -35,12 +35,20 @@ export default function TeamCard({ collaborateur }: { collaborateur: Collaborate
 				<nav>
 					<ul className="avatar_reseauSociaux">
 						<li>
-							<a href={collaborateur.reseau_link.github}>
+							<a
+								href={collaborateur.reseau_link.github}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								<img src={ic_github} alt="Lien vers Github" />
 							</a>
 						</li>
 						<li>
-							<a href={collaborateur.reseau_link.linkedin}>
+							<a
+								href={collaborateur.reseau_link.linkedin}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								<img src={ic_linkedin} alt="Lien vers Linkedin" />
 							</a>
 						</li>

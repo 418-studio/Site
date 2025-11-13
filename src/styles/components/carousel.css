@@ -1,30 +1,28 @@
+/* 🎠 SECTION CAROUSEL GLOBALE */
 .carousel {
 	background-color: var(--color-white);
-	/* min-height: 100dvh; */
 	display: flex;
+	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	padding: 1rem;
 }
 
-/* Container principal  */
+/* 🧩 Container principal */
 .carousel__container {
-	min-height: 100vh;
 	width: 100%;
 	max-width: 1024px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-around;
-	padding: 0 0 5dvw 0;
-
+	justify-content: center;
+	gap: 50px;
 }
 
-/* Container Texte */
+/* 📝 Container Texte */
 .container__text {
 	width: 90%;
-	height: 40%;
 	display: flex;
+	gap: 20px;
 	flex-direction: column;
 	justify-content: space-around;
 }
@@ -35,12 +33,12 @@
 	color: var(--color-accent-red);
 	margin: 5dvh 0 5dvh 0;
 	text-align: center;
-
-
 }
+
 .titleStudio {
-		color: var(--color-accent-gold);
-	}
+	color: var(--color-accent-gold);
+}
+
 .container__description {
 	font-family: var(--font-lato-regular);
 	font-size: var(--font-size-mobile-text);
@@ -56,30 +54,24 @@
 	text-align: justify;
 }
 
-/* Composant Images */
+/* 🎞️ Composant Images */
 .carousel__images {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	gap: 1rem;
+	align-items: center;
+	gap: 1.5rem;
 }
 
-.carousel__slider {
+/* Image principale */
+.carousel__main {
 	position: relative;
 	width: 100%;
+	max-width: 600px;
+	aspect-ratio: 16 / 9;
 	overflow: hidden;
+	border-radius: 8px;
 	box-shadow: var(--color-boxShadow);
-}
-
-.carousel__track {
-	display: flex;
-	transition: transform 0.5s ease-in-out;
-}
-
-.carousel__slide {
-	min-width: 100%;
-	height: 300px;
-	flex-shrink: 0;
 }
 
 .carousel__image {
@@ -89,13 +81,15 @@
 	display: block;
 }
 
-/* Contrôles */
+/* Contrôles (miniatures) */
 .carousel__controls {
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 	gap: 0.5rem;
 	margin-top: 1rem;
 }
+
 .carousel__thumb {
 	border: 2px solid transparent;
 	border-radius: 6px;
@@ -106,8 +100,10 @@
 	padding: 0;
 	transition: all 0.3s ease;
 }
+
 .carousel__thumb--active {
 	border-color: var(--color-accent-red);
+	transform: scale(1.05);
 }
 
 .carousel__thumb img {
@@ -116,32 +112,8 @@
 	object-fit: cover;
 	display: block;
 }
-.carousel__dots {
-	display: flex;
-	justify-content: center;
-	gap: 1rem;
-}
 
-.carousel__dot {
-	width: 15px;
-	height: 15px;
-	border-radius: 50%;
-	border: 2px solid var(--color-border-black);
-	background-color: transparent;
-	cursor: pointer;
-	transition: all 0.3s ease;
-	padding: 0;
-}
-
-.carousel__dot--active {
-	background-color: var(--color-text-black);
-}
-
-.carousel__dot:hover {
-	transform: scale(1.2);
-}
-
-/* Version Desktop */
+/* 🌐 Version Desktop */
 @media (min-width: 1024px) {
 	.carousel__container {
 		flex-direction: row;
@@ -159,6 +131,7 @@
 	.container__title {
 		font-size: var(--font-size-desktop-h2);
 		text-align: left;
+		margin-bottom: 3rem;
 	}
 
 	.container__description,
@@ -171,25 +144,18 @@
 		flex: 0 0 40%;
 	}
 
-	.carousel__slide {
+	.carousel__main {
+		max-width: 500px;
 		height: 500px;
 	}
 
-	.carousel__button {
-		font-size: var(--font-size-desktop-button);
-		padding: 14px 28px;
+	.carousel__thumb {
+		width: 80px;
+		height: 50px;
 	}
 
-	.carousel__buttons {
-		gap: 1.5rem;
-	}
-
-	.carousel__dots {
-		gap: 16px;
-	}
-
-	.carousel__dot {
-		width: 18px;
-		height: 18px;
+	.carousel__controls {
+		gap: 0.75rem;
 	}
 }
+

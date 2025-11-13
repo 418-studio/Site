@@ -30,6 +30,7 @@ export default function Hero() {
 
 	return (
 		<motion.section
+			id="hero"
 			ref={ref}
 			className="hero-section"
 			style={{
@@ -55,8 +56,6 @@ export default function Hero() {
 					On parle humain et JavaScript.
 				</motion.h2>
 			</article>
-
-			{/* <button className="ctaButton">Commencez votre projet</button> */}
 		</motion.section>
 	)
 }

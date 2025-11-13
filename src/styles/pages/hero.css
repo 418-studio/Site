@@ -1,4 +1,4 @@
-section {
+.hero-section {
     position: relative;
 	height: 100vh;
 	width: 100%;
@@ -8,6 +8,9 @@ section {
 	justify-content: space-around;
 	padding: 0 0 5vw 0;
 	background-color: var(--color-accent-blue);
+	  margin: 0 auto 10vh auto; /* pour centrer quand width < 100% */
+  overflow: hidden;
+  transition: width 0.3s ease, border-radius 0.3s ease, margin-bottom 0.3s ease;
 }
 /* Les deux articles de la page */
 .heroWrapper {
@@ -94,9 +97,4 @@ section {
 	padding: 10px 15px;
 	background-color: var(--color-accent-red);
 	z-index: 10;
-}
-.hero-section {
-  margin: 0 auto 20vh auto; /* pour centrer quand width < 100% */
-  overflow: hidden;
-  transition: width 0.3s ease, border-radius 0.3s ease, margin-bottom 0.3s ease;
 }
