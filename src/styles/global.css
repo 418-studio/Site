@@ -1,5 +1,6 @@
 body {
-    background-image: url("/images/hero/hero-bg-mobile.svg");
+    /* background-image: url("/images/hero/hero-bg-mobile.svg"); */
+    background-color: var(--color-white);
 }
 
 #root{
