@@ -3,6 +3,7 @@ import { useState } from 'react'
 import ContainerText from '../components/ContainerText'
 import CarouselImages from '../components/CarouselImages'
 import '../styles/components/carousel.css'
+import { motion } from 'framer-motion'
 
 interface CarouselImage {
 	id: number
@@ -45,6 +46,17 @@ const Carousel = () => {
 
 	return (
 		<section className="carousel">
+			<motion.h2
+				className="container__title"
+				initial={{ opacity: 0, y: 50 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.8 }}
+				viewport={{ once: true, amount: 0.5 }}
+			>
+				Bienvenue chez
+				<br />
+				<span className="titleStudio">Studio 418</span>
+			</motion.h2>
 			<article className="carousel__container">
 				<ContainerText />
 				<CarouselImages

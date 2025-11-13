@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+
 interface CarouselImage {
 	id: number
 	src: string
@@ -15,33 +17,39 @@ interface CarouselImagesProps {
 const CarouselImages = ({ images, currentImage, goToImage }: CarouselImagesProps) => {
 	return (
 		<article className="carousel__images">
+			{/* Slider */}
 			<div className="carousel__slider">
-				<div
+				<motion.div
 					className="carousel__track"
-					style={{
-						transform: `translateX(-${currentImage * 100}%)`,
+					style={{ x: `-${currentImage * 100}%` }}
+					drag="x"
+					dragConstraints={{ left: 0, right: 0 }}
+					onDragEnd={(event, info) => {
+						if (info.offset.x < -50) goToImage((currentImage + 1) % images.length)
+						if (info.offset.x > 50)
+							goToImage((currentImage - 1 + images.length) % images.length)
 					}}
+					transition={{ type: 'spring', stiffness: 300, damping: 30 }}
 				>
 					{images.map((image) => (
 						<div className="carousel__slide" key={image.id}>
 							<img src={image.src} alt={image.alt} className="carousel__image" />
 						</div>
 					))}
-				</div>
+				</motion.div>
 			</div>
 
+			{/* Miniatures comme contrôles */}
 			<div className="carousel__controls">
-				<div className="carousel__dots">
-					{images.map((_, index) => (
-						<button
-							key={index}
-							onClick={() => goToImage(index)}
-							className={`carousel__dot ${
-								currentImage === index ? 'carousel__dot--active' : ''
-							}`}
-						/>
-					))}
-				</div>
+				{images.map((img, index) => (
+					<button
+						key={index}
+						className={`carousel__thumb ${currentImage === index ? 'carousel__thumb--active' : ''}`}
+						onClick={() => goToImage(index)}
+					>
+						<img src={img.src} alt={img.alt} />
+					</button>
+				))}
 			</div>
 		</article>
 	)

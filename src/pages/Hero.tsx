@@ -26,7 +26,7 @@ export default function Hero() {
 
 	// 🔥 Animation de la forme du hero
 	const width = useTransform(scrollYProgress, [0.1, 1], ['100%', '90%'])
-	const borderRadius = useTransform(scrollYProgress, [0.2, 0.5], ['0px', '20px'])
+	const borderRadius = useTransform(scrollYProgress, [0, 0.3], ['0', '20px'])
 
 	return (
 		<motion.section
