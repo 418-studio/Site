@@ -8,10 +8,13 @@ export default function Header() {
 	const [scrolled, setScrolled] = useState(false)
 
 	useEffect(() => {
+		let timeout: number
 		function handleScroll() {
-			const scrollY = window.scrollY
-			const trigger = window.innerHeight - window.innerHeight
-			setScrolled(scrollY > trigger)
+			clearTimeout(timeout)
+			timeout = setTimeout(() => {
+				const triggerPoint = window.innerHeight / 2
+				setScrolled(window.scrollY > triggerPoint)
+			}, 50)
 		}
 		window.addEventListener('scroll', handleScroll)
 		return () => window.removeEventListener('scroll', handleScroll)
@@ -23,13 +26,14 @@ export default function Header() {
 
 	return (
 		<motion.header
-			className={scrolled ? 'bgNav' : ''}
+			className="header"
+			initial={{ backgroundColor: 'rgba(0,0,0,0)' }}
 			animate={{
-				backgroundImage: scrolled ? 'url("/images/hero/hero-bg-mobile-noopacity.svg")' : '',
+				backgroundColor: scrolled
+					? 'rgba(0, 0, 0, 0.6)' // ou utilise une couleur liée à ton design system
+					: 'rgba(0,0,0,0)',
 			}}
-			transition={{
-				backgroundImage: { duration: 1.2, ease: 'easeInOut' },
-			}}
+			transition={{ duration: 0.6, ease: 'easeInOut' }}
 		>
 			<nav>
 				<ul className="navDesktop">
@@ -40,31 +44,41 @@ export default function Header() {
 						<NavButton handleOnclick={handleNavButtonClick} />
 					</li>
 				</ul>
+
 				<button className="navToggle" onClick={() => setIsMobileMenuOpen((open) => !open)}>
 					<img src="/images/icons/icon-burger.svg" alt="Bouton de menu" />
 				</button>
+
 				<AnimatePresence>
 					{isMobileMenuOpen && (
-						<>
-							<motion.ul
-								className="navMobile"
-								initial={{ opacity: 0, y: -100 }}
-								animate={{ opacity: 1, y: 0 }}
-								exit={{ opacity: 0, y: -100 }}
-								transition={{ duration: 0.3 }}
-							>
-								<li>Présentation</li>
-								<li>Notre équipe</li>
-								<li>Contact</li>
-								<li>
-									<NavButton handleOnclick={handleNavButtonClick} />
-								</li>
-							</motion.ul>
-						</>
+						<motion.ul
+							className="navMobile"
+							initial={{ opacity: 0, y: -100 }}
+							animate={{ opacity: 1, y: 0 }}
+							exit={{ opacity: 0, y: -100 }}
+							transition={{ duration: 0.3 }}
+						>
+							<li>Présentation</li>
+							<li>Notre équipe</li>
+							<li>Contact</li>
+							<li>
+								<NavButton handleOnclick={handleNavButtonClick} />
+							</li>
+						</motion.ul>
 					)}
 				</AnimatePresence>
 			</nav>
-			{scrolled && <img src="/images/logos/logo-418.svg" alt="logo 418 du studio" />}
+
+			{scrolled && (
+				<motion.img
+					src="/images/logos/logo-418.svg"
+					alt="logo 418 du studio"
+					initial={{ opacity: 0, y: -10 }}
+					animate={{ opacity: 1, y: 0 }}
+					exit={{ opacity: 0 }}
+					transition={{ duration: 0.5 }}
+				/>
+			)}
 		</motion.header>
 	)
 }
