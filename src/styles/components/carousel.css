@@ -1,6 +1,6 @@
 .carousel {
 	background-color: var(--color-white);
-	/* min-height: 100dvh; */
+	min-height: 100dvh;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -9,15 +9,14 @@
 
 /* Container principal  */
 .carousel__container {
-	min-height: 80dvh;
+	min-height: 90dvh;
 	width: 100%;
 	max-width: 1024px;
 	display: flex;
 	flex-direction: column;
-	gap: 1rem;
 	align-items: center;
 	justify-content: space-around;
-	padding: 0 0 5dvw 0;
+	padding: 0 0 20dvw 0;
 
 }
 

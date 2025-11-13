@@ -29,7 +29,7 @@ export default function TeamCard({ collaborateur }: { collaborateur: Collaborate
 				</p>
 				<div>
 					<h2 className="avatar_function">{collaborateur.functions.firstRow}</h2>
-					<h2 className="avatar_functin">{collaborateur.functions.secondRow}</h2>
+					<h2 className="avatar_function">{collaborateur.functions.secondRow}</h2>
 				</div>
 				<p className="avatar_description">{collaborateur.description}</p>
 				<nav>
