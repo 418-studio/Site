@@ -20,6 +20,15 @@ export default function Header() {
 		return () => window.removeEventListener('scroll', handleScroll)
 	}, [])
 
+	// 🔹 Scroll doux vers la section
+	function scrollToSection(sectionId: string) {
+		const section = document.getElementById(sectionId)
+		if (section) {
+			section.scrollIntoView({ behavior: 'smooth', block: 'start' })
+			setIsMobileMenuOpen(false) // referme le menu mobile
+		}
+	}
+
 	function handleNavButtonClick() {
 		window.location.href = 'mailto:studio418.pro@gmail.com'
 	}
@@ -29,17 +38,15 @@ export default function Header() {
 			className="header"
 			initial={{ backgroundColor: 'rgba(0,0,0,0)' }}
 			animate={{
-				backgroundColor: scrolled
-					? 'rgba(0, 0, 0, 0.6)' // ou utilise une couleur liée à ton design system
-					: 'rgba(0,0,0,0)',
+				backgroundColor: scrolled ? 'rgba(0, 0, 0, 0.6)' : 'rgba(0,0,0,0)',
 			}}
 			transition={{ duration: 0.6, ease: 'easeInOut' }}
 		>
 			<nav>
 				<ul className="navDesktop">
-					<li>Présentation</li>
-					<li>Notre équipe</li>
-					<li>Contact</li>
+					<li onClick={() => scrollToSection('presentation')}>Présentation</li>
+					<li onClick={() => scrollToSection('SectionOurTeam')}>Notre équipe</li>
+					<li onClick={() => scrollToSection('sectionContact')}>Contact</li>
 					<li>
 						<NavButton handleOnclick={handleNavButtonClick} />
 					</li>
@@ -58,9 +65,9 @@ export default function Header() {
 							exit={{ opacity: 0, y: -100 }}
 							transition={{ duration: 0.3 }}
 						>
-							<li>Présentation</li>
-							<li>Notre équipe</li>
-							<li>Contact</li>
+							<li onClick={() => scrollToSection('presentation')}>Présentation</li>
+							<li onClick={() => scrollToSection('SectionOurTeam')}>Notre équipe</li>
+							<li onClick={() => scrollToSection('sectionContact')}>Contact</li>
 							<li>
 								<NavButton handleOnclick={handleNavButtonClick} />
 							</li>
@@ -71,6 +78,7 @@ export default function Header() {
 
 			{scrolled && (
 				<motion.img
+					onClick={() => scrollToSection('hero')}
 					src="/images/logos/logo-418.svg"
 					alt="logo 418 du studio"
 					initial={{ opacity: 0, y: -10 }}

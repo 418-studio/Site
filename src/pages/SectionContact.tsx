@@ -23,7 +23,9 @@ export default function SectionContact() {
 					<p>
 						<a href="mailto:studio418.pro@gmail.com">studio418.pro@gmail.com</a>
 					</p>
-					<p>06.10.32.77.02</p>
+					<p>
+						<a href="tel:0610327702">06.10.32.77.02</a>
+					</p>
 					<div id="sectionContact_coordonne_rectangle"></div>
 				</div>
 				<div id="sectionContact_citation">
