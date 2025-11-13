@@ -8,7 +8,7 @@ const ContainerText = () => {
 				initial={{ opacity: 0, y: 50 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.2, delay: 0.4 }}
-				viewport={{ once: true, amount: 0.5 }}
+				viewport={{ once: true, amount: 0.2 }}
 			>
 				Nous sommes trois développeurs passionnés, sortis fraîchement de formation, unis par
 				une envie commune :
@@ -19,7 +19,7 @@ const ContainerText = () => {
 				initial={{ opacity: 0, y: 50 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.2, delay: 0.8 }}
-				viewport={{ once: true, amount: 0.5 }}
+				viewport={{ once: true, amount: 0.2 }}
 			>
 				&ldquo;Mélanger apprentissage, créativité et code pour concevoir des projets utiles,
 				esthétiques et modernes.&rdquo;
@@ -30,7 +30,7 @@ const ContainerText = () => {
 				initial={{ opacity: 0, y: 50 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.2, delay: 1.2 }}
-				viewport={{ once: true, amount: 0.5 }}
+				viewport={{ once: true, amount: 0.2 }}
 			>
 				Que vous ayez besoin d’un site vitrine, d’une application web complexe ou d’une
 				refonte complète, nous sommes là pour vous accompagner à chaque étape.
