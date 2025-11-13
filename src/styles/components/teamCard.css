@@ -7,8 +7,8 @@
 .teamCard{
     display: flex;
     flex-direction: column;
-    width: 350px;
-    height: 500px;
+    width: 325px;
+    height: 475px;
     border-radius: var(--size_borderRadius);
     box-shadow: 0 6px 6px var(--color-boxShadow);
 }
@@ -68,17 +68,19 @@
 
 .teamCard .teamCard_title{
     font-family: var(--font-poiret);
-    font-size: 3rem;
+    font-size: var(--font-size-mobile-card-title);
+
     z-index: 2;
 }
 
 .teamCard h2 {
-    font-size: 1.5rem;
+    font-size: var(--font-size-mobile-button);
+
     font-weight: bold;
 }
 
 .teamCard p {
-    font-size: 1.1rem;
+    font-size: var(--font-size-mobile-text);
     padding: 0 24px;
 }
 
