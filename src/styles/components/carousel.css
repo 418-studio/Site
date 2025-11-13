@@ -1,6 +1,6 @@
 .carousel {
 	background-color: var(--color-white);
-	min-height: 100dvh;
+	min-height: 100vh;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -9,7 +9,7 @@
 
 /* Container principal  */
 .carousel__container {
-	min-height: 90dvh;
+	min-height: 90vh;
 	width: 100%;
 	max-width: 1024px;
 	display: flex;
@@ -34,7 +34,7 @@
 	font-family: var(--font-josefin);
 	font-size: var(--font-size-mobile-h2);
 	color: var(--color-accent-red);
-	margin: 5dvh 0 5dvh 0;
+	margin: 5dvh 0 5vh 0;
 	text-align: center;
 
 
