@@ -6,7 +6,7 @@ section {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	padding: 0 0 10dvw 0;
+	padding: 0 0 5dvw 0;
 	background-color: var(--color-accent-blue);
 }
 /* Les deux articles de la page */
