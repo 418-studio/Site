@@ -24,7 +24,7 @@ const CarouselImages = ({ images, currentImage, goToImage }: CarouselImagesProps
 					style={{ x: `-${currentImage * 100}%` }}
 					drag="x"
 					dragConstraints={{ left: 0, right: 0 }}
-					onDragEnd={(event, info) => {
+					onDragEnd={(_, info) => {
 						if (info.offset.x < -50) goToImage((currentImage + 1) % images.length)
 						if (info.offset.x > 50)
 							goToImage((currentImage - 1 + images.length) % images.length)
