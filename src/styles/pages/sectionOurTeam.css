@@ -6,8 +6,8 @@
     align-items: center;
     justify-content: center;
     padding: 64px 0;
-    gap: 10dvh;
-    margin: 5dvh 0 5dvh 0;
+    gap: 10vh;
+    margin: 5vh 0 5vh 0;
 }
 
 #titre_sectionOurTeam {
@@ -21,7 +21,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 18dvh;
+    gap: 18vh;
     width: 100%; 
 }
 

@@ -6,7 +6,7 @@ section {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	padding: 0 0 5dvw 0;
+	padding: 0 0 5vw 0;
 	background-color: var(--color-accent-blue);
 }
 /* Les deux articles de la page */
@@ -70,13 +70,13 @@ section {
 
 .circle {
 	position: absolute;
-	height: 35dvh;
-	width: 35dvh;
+	height: 35vh;
+	width: 35vh;
 	border: 20px solid var(--color-accent-gold);
 	border-radius: 50%;
 	top: -25%;
 	z-index: 0;
-	right: -20dvh;
+	right: -20vh;
 	top: 50%;
 	transform: translateY(-50%);
 }
@@ -96,7 +96,7 @@ section {
 	z-index: 10;
 }
 .hero-section {
-  margin: 0 auto 20dvh auto; /* pour centrer quand width < 100% */
+  margin: 0 auto 20vh auto; /* pour centrer quand width < 100% */
   overflow: hidden;
   transition: width 0.3s ease, border-radius 0.3s ease, margin-bottom 0.3s ease;
 }
