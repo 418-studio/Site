@@ -8,17 +8,17 @@
     gap: 5;
     height: auto;
     position: relative;
-    margin: 0 0 5vh 0;
 
 }
 
 #sectionContact_container{
     width: 100%;
+    min-height: 80vh;
     max-width: var(--max-size-section);
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 #sectionContact_title{
