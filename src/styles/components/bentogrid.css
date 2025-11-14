@@ -4,11 +4,12 @@
 	background-color: var(--color-white);
 	min-height: 100vh;
 	width: 80vw;
+	margin : 0 0 5vh 0
 }
 
 .bento__container {
 	width: 100%;
-	max-width: 1400px;
+	max-width: var(--max-size-section);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -27,7 +28,7 @@
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: repeat(3, 1fr);
-		gap: 1rem;
+		gap: 2rem;
 		width: 90%;
 		height: 90vh;
 	}

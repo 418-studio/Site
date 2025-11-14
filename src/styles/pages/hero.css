@@ -1,5 +1,5 @@
 .hero-section {
-    position: relative;
+	position: relative;
 	height: 100vh;
 	width: 100%;
 	overflow: hidden;
@@ -8,12 +8,16 @@
 	justify-content: space-around;
 	padding: 0 0 5vw 0;
 	background-color: var(--color-accent-blue);
-	  margin: 0 auto 15vh auto; /* pour centrer quand width < 100% */
-  overflow: hidden;
-  transition: width 0.3s ease, border-radius 0.3s ease, margin-bottom 0.3s ease;
+	margin: 0 auto 15vh auto; /* pour centrer quand width < 100% */
+	overflow: hidden;
+	transition:
+		width 0.3s ease,
+		border-radius 0.3s ease,
+		margin-bottom 0.3s ease;
 }
 /* Les deux articles de la page */
-.heroWrapper {
+@media (max-width: 767px) {
+	.heroWrapper {
 	position: relative;
 	width: 100%;
 	overflow: visible;
@@ -27,6 +31,8 @@
 	width: 80%;
 	z-index: 1;
 }
+}
+
 
 /* Background blanc */
 .heroBackground {
@@ -97,4 +103,24 @@
 	padding: 10px 15px;
 	background-color: var(--color-accent-red);
 	z-index: 10;
+}
+
+@media (min-width: 768px) {
+	.heroInfo {
+		display: none;
+	}
+	.heroWrapper {
+	position: relative;
+	width: 100%;
+	overflow: visible;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 10%;
+}
+.heroWrapper img {
+	width: 30%;
+	z-index: 1;
+}
 }
