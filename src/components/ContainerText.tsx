@@ -10,8 +10,8 @@ const ContainerText = () => {
 				transition={{ duration: 0.2, delay: 0.4 }}
 				viewport={{ once: true, amount: 0.2 }}
 			>
-				Nous sommes trois développeurs passionnés, sortis fraîchement de formation, unis par
-				une envie commune :
+				Nous sommes trois développeurs passionnés, formés récemment, unis par une même
+				conviction : progresser en réalisant des projets qui comptent.
 			</motion.p>
 
 			<motion.p
@@ -21,8 +21,7 @@ const ContainerText = () => {
 				transition={{ duration: 0.2, delay: 0.8 }}
 				viewport={{ once: true, amount: 0.2 }}
 			>
-				&ldquo;Mélanger apprentissage, créativité et code pour concevoir des projets utiles,
-				esthétiques et modernes.&rdquo;
+				&ldquo;Apprendre en créant, créer avec soin.&rdquo;
 			</motion.p>
 
 			<motion.p
@@ -32,8 +31,8 @@ const ContainerText = () => {
 				transition={{ duration: 0.2, delay: 1.2 }}
 				viewport={{ once: true, amount: 0.2 }}
 			>
-				Que vous ayez besoin d’un site vitrine, d’une application web complexe ou d’une
-				refonte complète, nous sommes là pour vous accompagner à chaque étape.
+				Notre atelier-apprenant fonctionne en partenariat gagnant–gagnant : vous bénéficiez
+				de solutions web soignées, nous enrichissons notre expertise.
 			</motion.p>
 		</article>
 	)

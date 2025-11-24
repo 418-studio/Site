@@ -47,13 +47,13 @@ export default function Hero() {
 			<article className="heroInfo">
 				<div className="circle"></div>
 				<motion.h2 {...h2Spring} animate={showH2 ? h2Spring.animate : h2Spring.initial}>
-					Petite équipe, grands projets
+					Des solutions web fiables, faites avec soin.
 				</motion.h2>
 				<motion.h2 {...h2Spring} animate={showH2 ? h2Spring.animate : h2Spring.initial}>
-					Le numérique au service de vos objectifs.
+					Un atelier-apprenant où chaque projet nous fait grandir.
 				</motion.h2>
 				<motion.h2 {...h2Spring} animate={showH2 ? h2Spring.animate : h2Spring.initial}>
-					On parle humain et JavaScript.
+					Sites vitrines. Apps web. Outils métier.
 				</motion.h2>
 			</article>
 		</motion.section>
