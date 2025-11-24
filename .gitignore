@@ -28,4 +28,3 @@ dist-ssr
 *.pid
 *.log
 .docker
-.dockerignore

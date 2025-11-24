@@ -1,0 +1,123 @@
+/* Section cachée en mobile */
+.bento {
+	display: none;
+	background-color: var(--color-white);
+	min-height: 100vh;
+	width: 80vw;
+	margin : 0 0 5vh 0
+}
+
+.bento__container {
+	width: 100%;
+	max-width: var(--max-size-section);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Affichage desktop uniquement */
+@media (min-width: 900px) {
+	.bento {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.bento__grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		gap: 2rem;
+		width: 90%;
+		height: 90vh;
+	}
+
+	/* Card de base */
+	.bento__card {
+		border-radius: 0;
+		margin: 0;
+		padding: 0.5rem;
+		transition:
+			transform 0.3s ease,
+			box-shadow 0.3s ease;
+		position: relative;
+	}
+
+	.bento__card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 8px 20px var(--color-boxShadow);
+	}
+
+	.bento__image {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		display: block;
+		padding: 0;
+		border-radius: 0;
+		margin: 0;
+		padding: 0;
+	}
+
+	/* Vous & Nous - Grande carte à gauche */
+	.bento__card--who {
+		grid-column: 1 / 1;
+		grid-row: 1 / 3;
+		background-color: var(--color-accent-red);
+	}
+
+	/* Nos Missions - Rectangle horizontal en haut */
+	.bento__card--missions {
+		grid-column: 2 / 3;
+		grid-row: 1 / 2;
+		background-color: var(--color-accent-gold);
+	}
+
+	/* Théière - Carré en haut à droite */
+	.bento__card--teapot {
+		grid-column: 3 / 4;
+		grid-row: 1 / 1;
+		background-color: white;
+	}
+
+	/* Notre Approche - Grande carte en bas à gauche */
+	.bento__card--approche {
+		grid-column: 1 / 2;
+		grid-row: 3 / 5;
+		background-color: var(--color-accent-blue);
+	}
+
+	/* Ce que nous réalisons - Grande carte centrale */
+	.bento__card--realisations {
+		grid-column: 2 / 4;
+		grid-row: 2 / 4;
+		background-color: white;
+	}
+
+	/* Citation - Rectangle horizontal */
+	.bento__card--citation {
+		grid-column: 2 / 3;
+		grid-row: 4/ 4;
+		background-color: white;
+	}
+
+	/* Équipe - Carte à droite */
+	.bento__card--equipe {
+		grid-column: 3 / 4;
+		grid-row: 4 / 4;
+		background-color: var(--color-accent-green);
+	}
+}
+
+@media (min-width: 1440px) {
+	.bento__grid {
+		gap: 2rem;
+		height: 85vh;
+		min-height: 800px;
+	}
+
+	.bento__card {
+		border-radius: 5%;
+	}
+}

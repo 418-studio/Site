@@ -1,0 +1,45 @@
+#sectionTitreOurTeam {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    height: auto;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    margin-bottom: 8vh;
+    background-color: var(--color-accent-blue);
+}
+
+#sectionTitreOurTeam h2 {
+    color: var(--color-white);
+    text-align: center;
+}
+
+#banniere_texte {
+    width: 100%;
+    max-width: var(--max-size-section);
+    min-height: 500px;
+    background: url('/images/composants/banner.webp') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#citation {
+    z-index: 1;
+    text-align: center;
+    font-size: var(--font-size-desktop-button);
+    border-radius: 8px;
+}
+
+@media (min-width: 750px) {
+    #sectionTitreOurTeam {
+        display: flex;
+    }
+}
+
+@media (min-width: 1024px) {
+    #citation {
+        width: 450px;
+    }
+}

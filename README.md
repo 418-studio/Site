@@ -18,6 +18,11 @@ git clone <lien>
 cd <nom_du_projet>
 ```
 
+- Avec l'utilisation de typescrypt, afin d'éviter des problèmes avec l'éditeur de code on peut installer les librairies afin que typescript ai accés à toutes les librairies du projet
+```bash
+npm install
+````
+
 - vérifier que docker desktop est lancé
 - créer une image locale
 
@@ -36,11 +41,9 @@ docker run -it -p 5173:5173 \
 
 ### Travailler sur une nouvelle fonctionnalité
 
-- créer une nouvelle branche à partir de **main**
+- créer une nouvelle branche à partir de **dev**
 
 ```bash
-git switch main
-git pull
 git switch -c feat/nom-fonctionnalite
 ```
 
@@ -66,11 +69,15 @@ rappel : [[Conventional commits]]
 - Discuter ou corriger selon les retours avant merge.
 
 ### Mise à jours locale
+On souhaite remplacer la branche dev locale par l'image de la branche dev distante.
+On supprime les branches déjà push.
+On créé une nouvelle branche.
 
 ```bash
-git switch main
-git pull
-git branch -D feat/nom-fonctionnalite
+git switch dev
+git fetch origin
+git reset --hard origin/dev
+git branch -d feat/nom-fonctionnalite
 git switch -c feat/nom2-fonctionnalite2
 ```
 

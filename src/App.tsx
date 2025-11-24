@@ -1,19 +1,23 @@
-import { useState } from 'react'
-import './App.css'
+import Footer from './components/Footer.tsx'
+import SectionOurTeam from './pages/SectionOurTeam.tsx'
+import Header from './components/Header.tsx'
+import SectionContact from './pages/SectionContact.tsx'
+import Carousel from './pages/Carousel.tsx'
+import Hero from './pages/Hero.tsx'
+import SectionTitreOurTeam from './pages/SectionTitreOurTeam.tsx'
+import BentoGrid from './pages/BentoGrid.tsx'
 
 function App() {
-	const [count, setCount] = useState(0)
-
 	return (
 		<>
-			<h1>Vite + React</h1>
-			<div className="card">
-				<button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-				<p>
-					Edit <code>src/App.tsx</code> and save to test HMR
-				</p>
-			</div>
-			<p className="read-the-docs">Click on the Vite and React logos to learn more</p>
+			<Header />
+			<Hero />
+			<Carousel />
+			<SectionTitreOurTeam />
+			<SectionOurTeam />
+			<BentoGrid />
+			<SectionContact />
+			<Footer />
 		</>
 	)
 }

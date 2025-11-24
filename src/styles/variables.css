@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'Poiret One';
+    src: url(../assets/fonts/PoiretOne-Regular.ttf);
+}
+@font-face {
+    font-family: 'Lato Regular';
+    src: url(../assets/fonts/Lato-Regular.ttf);
+}
+@font-face {
+    font-family: 'Emblema One';
+    src: url(../assets/fonts/EmblemaOne-Regular.ttf);
+}
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url(../assets/fonts/JosefinSans-Regular.ttf);
+}
+:root {
+    /* colors */
+    --color-white : #F5F5F3;
+    --color-text : #2B2B28;
+    --color-boxShadow : rgba(43, 43, 40, 0.3);;
+    --color-text-black : #2B2B28;
+    --color-accent-gold : #E3BD33;
+    --color-accent-red : #C33C54;
+    --color-accent-green : #6F8D6A;
+    --color-accent-lighGreen: #D7E8BC;
+    --color-accent-blue : #2D5282;
+    --color-border-black : #433E3C;
+
+    /* fonts */
+    --font-poiret : 'Poiret One', cursive;
+    --font-lato-regular : 'Lato Regular', sans-serif;
+    --font-lato-light : 'Lato Light', sans-serif;
+    --font-emblema : 'Emblema One', cursive;
+    --font-josefin : 'Josefin Sans', sans-serif;
+
+    /* breakpoints */
+    --break-mobile : 430px;
+
+    /* Sizes */
+    /* Mobile */
+    --font-size-mobile-h1 : 50px;
+    --font-size-mobile-h2 : 32px;
+    --font-size-mobile-card-title : 34px;
+    --font-size-mobile-text : 18px;
+    --font-size-mobile-button : 22px;
+
+    /* Desktop */
+    --font-size-desktop-h1 : 200px;
+    --font-size-desktop-h2 : 48px;
+    --font-size-desktop-card-title : 38px;
+    --font-size-desktop-text : 20px;
+    --font-size-desktop-button : 24px;
+    --max-size-section : 1200px;
+}

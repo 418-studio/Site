@@ -1,0 +1,77 @@
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 7dvh;
+	padding: 2dvh 5dvw;
+	z-index: 1001;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	align-items: center;
+	backdrop-filter: blur(10px); /* joli effet “verre dépoli” */
+	transition: background-color 0.6s ease;
+}
+
+header nav {
+	display: flex;
+	width: 50%;
+	flex-direction: row-reverse;
+	align-items: center;
+}
+header img {
+	scale:  0.8;
+}
+
+.navMobile {
+    position: absolute;
+	padding: 13dvh 20px 20px 20px;
+	right: 0;
+	top: 0;
+	width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2dvh;
+    align-items: flex-end;
+    font-family: var(--font-lato-regular);
+    color: var(--color-white);
+    font-size: var(--font-size-mobile-text);
+	box-shadow: -5px 0 15px var(--color-boxShadow);
+	background-color: rgba(34, 34, 34, 0.6);
+	backdrop-filter: blur(10px); /* joli effet “verre dépoli” */;
+
+}
+
+
+.navDesktop {
+	display: none;
+	flex-direction: row;
+	gap: 2dvw;
+	align-items: center;
+	justify-content: flex-end;
+	font-family: var(--font-lato-regular);
+	color: var(--color-white);
+	font-size: var(--font-size-desktop-text);
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.navToggle {
+	z-index: 999;
+}
+@media (min-width: 769px) {
+
+	.nav {
+		width: 50%;
+	}
+	.navDesktop {
+		display: flex;
+	}
+	.navToggle {
+		display: none;
+	}
+	.navMobile {
+		display: none;
+	}
+}

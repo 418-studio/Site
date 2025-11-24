@@ -1,0 +1,25 @@
+# 🗑️ Dépendances locales
+node_modules
+
+# 🚫 Dossiers générés
+dist
+build
+coverage
+
+# ⚙️ Fichiers d'environnement et logs
+.env
+*.log
+logs
+
+# 🧩 Configs d'éditeurs
+.vscode
+.idea
+.DS_Store
+
+# 🐙 Git
+.git
+.gitignore
+
+# 🐳 Docker
+.docker
+*.pid
