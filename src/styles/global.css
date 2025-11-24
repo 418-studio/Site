@@ -21,6 +21,7 @@ h2 {
     font-family: var(--font-josefin);
     font-size: var(--font-size-mobile-h2);
     color: var(--color-accent-blue);
+    text-align: center;
 }
 
 p {
